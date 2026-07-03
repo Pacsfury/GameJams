@@ -6,7 +6,7 @@
 * Jam: [Trijam-379](https://itch.io/jam/trijam-379)
 * Language: Lua
 * Engine: Löve2D
-* Time: ~3H
+* Time: ~2.30H
 
 ### The Game:
 
