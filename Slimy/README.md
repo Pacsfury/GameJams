@@ -3,10 +3,10 @@
 
 ### Basic Info:
 
-Jam: [Trijam-379](https://itch.io/jam/trijam-379)
-Language: Lua
-Engine: Löve2D
-Time: ~3H
+* Jam: [Trijam-379](https://itch.io/jam/trijam-379)
+* Language: Lua
+* Engine: Löve2D
+* Time: ~3H
 
 ### The Game:
 
