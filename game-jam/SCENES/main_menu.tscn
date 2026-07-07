@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://btk2ctwa3o0cf"]
+
+[ext_resource type="Script" uid="uid://cngk4n2v56o3m" path="res://SCRIPTS/menu.gd" id="1_273u5"]
+[ext_resource type="FontFile" uid="uid://d228lblpxjs03" path="res://ASSETS/Fonts/toxigenesis bd.otf" id="1_xfrmw"]
+[ext_resource type="Texture2D" uid="uid://bgxussj1xwd3b" path="res://ASSETS/Images/menubg.png" id="3_1hj21"]
+[ext_resource type="Texture2D" uid="uid://c00qeec5ytu0i" path="res://ASSETS/Images/title.png" id="4_68vjf"]
+
+[node name="main menu" type="Control" unique_id=983672245]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_273u5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=852646568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -528.0
+offset_top = 234.0
+offset_right = -128.0
+offset_bottom = 524.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=2064492688]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.49411765, 1, 0.7921569, 1)
+theme_override_colors/font_hover_color = Color(0.63529414, 0.9490196, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8509804, 1, 0.9137255, 1)
+theme_override_fonts/font = ExtResource("1_xfrmw")
+theme_override_font_sizes/font_size = 100
+text = "Play!"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1171762316]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.49411765, 0.0627451, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(1, 0.3137255, 0.31764707, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9843137, 0.14901961, 0.46666667, 1)
+theme_override_fonts/font = ExtResource("1_xfrmw")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="Menubg" type="Sprite2D" parent="." unique_id=716310876]
+z_index = -5
+position = Vector2(22.999998, 300.00003)
+scale = Vector2(1.0569018, 1.0569018)
+texture = ExtResource("3_1hj21")
+
+[node name="Title2" type="Sprite2D" parent="." unique_id=745296204]
+position = Vector2(-189.00003, 136)
+scale = Vector2(1.8902439, 1.8902439)
+texture = ExtResource("4_68vjf")
+
+[connection signal="mouse_entered" from="VBoxContainer/play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/play" to="." method="_on_play_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
