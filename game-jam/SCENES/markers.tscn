@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bovf0bu8hxu5s"]
+
+[ext_resource type="Script" uid="uid://bxl51fir0cebx" path="res://SCRIPTS/despawn.gd" id="1_l2uum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbnbv"]
+size = Vector2(85, 92)
+
+[node name="Markers" type="Node" unique_id=482106331]
+
+[node name="spawn" type="Marker2D" parent="." unique_id=384018762]
+position = Vector2(-2561, -1258)
+
+[node name="despawn" type="Marker2D" parent="." unique_id=1231752077]
+position = Vector2(-2619, 646)
+script = ExtResource("1_l2uum")
+
+[node name="Area2D" type="Area2D" parent="despawn" unique_id=315684128]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="despawn/Area2D" unique_id=307626561]
+position = Vector2(32.5, 36)
+shape = SubResource("RectangleShape2D_nbnbv")
+
+[connection signal="body_entered" from="despawn/Area2D" to="despawn" method="_on_area_2d_body_entered"]

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://45cro5y7b5cy"]
+
+[ext_resource type="FontFile" uid="uid://d228lblpxjs03" path="res://ASSETS/Fonts/toxigenesis bd.otf" id="1_021pr"]
+[ext_resource type="Script" uid="uid://bx84xa8jhuw1y" path="res://SCRIPTS/levelmap.gd" id="1_f6fnt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6fnt"]
+font = ExtResource("1_021pr")
+font_size = 128
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(0, 0, 0, 0.45882353)
+shadow_offset = Vector2(5, 5)
+
+[node name="levelmap" type="Control" unique_id=743303684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6fnt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2140252162]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 172.0
+offset_right = 664.0
+offset_bottom = 242.0
+theme_override_constants/separation = 8
+
+[node name="lvl1" type="Button" parent="HBoxContainer" unique_id=12257573]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_021pr")
+theme_override_font_sizes/font_size = 32
+text = "Level 1"
+
+[node name="lvl2" type="Button" parent="HBoxContainer" unique_id=141298934]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_021pr")
+theme_override_font_sizes/font_size = 32
+text = "Level 2"
+
+[node name="lvl3" type="Button" parent="HBoxContainer" unique_id=1279388282]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_021pr")
+theme_override_font_sizes/font_size = 32
+text = "Level 3"
+
+[node name="Label" type="Label" parent="." unique_id=1178231788]
+layout_mode = 0
+offset_left = 331.0
+offset_top = -4.0
+offset_right = 780.0
+offset_bottom = 151.0
+text = "Levels"
+label_settings = SubResource("LabelSettings_f6fnt")
+
+[connection signal="pressed" from="HBoxContainer/lvl1" to="." method="_on_lvl_pressed" binds= ["1"]]
+[connection signal="pressed" from="HBoxContainer/lvl2" to="." method="_on_lvl_pressed" binds= ["2"]]
+[connection signal="pressed" from="HBoxContainer/lvl3" to="." method="_on_lvl_pressed" binds= ["3"]]
