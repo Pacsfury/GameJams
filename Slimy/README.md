@@ -17,10 +17,11 @@ Click to fire, kill to place a piece into the map. Win the tic-tac-toe to win. G
 ### Possible Updates
 _All updates would be done in other repos_
 
-1. More enemies
-2. Better visuals
-3. Audios
-4. Progression system
+1. More enemy types
+2. When player dies, enemy puts a piece of its own
+3. Better visuals
+4. Audios
+5. Progression system
 
 ### What I Learnt
 
